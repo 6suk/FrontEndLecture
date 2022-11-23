@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 양식</title>
+  </head>
+  <style>
+    body {
+      margin: 80px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+
+    tr {
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <h3>입력 양식</h3>
+    <form action="" method="get">
+      <table>
+        <tr>
+          <td>텍스트</td>
+          <td><input type="text" name="a" /></td>
+        </tr>
+
+        <tr>
+          <td>패스워드</td>
+          <td><input type="password" name="b" /></td>
+        </tr>
+
+        <tr>
+          <!-- <td>히든</td> Update 시 사용 -->
+          <td><input type="hidden" name="id" value="primary key" /></td>
+        </tr>
+
+        <tr>
+          <td>셀렉트</td>
+          <td>
+            <select name="d" id="">
+              <option value="1">김밥</option>
+              <option value="2">떡볶이</option>
+              <option value="3">순대</option>
+              <option value="4">어묵</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>셀렉트 멀티</td>
+          <td>
+            <select name="e" id="" multiple>
+              <option value="1">김밥</option>
+              <option value="2">떡볶이</option>
+              <option value="3">순대</option>
+              <option value="4">어묵</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>라디오</td>
+          <td>
+            <input type="radio" name="f" id="" value="male" />남자
+            <input type="radio" name="f" id="" value="female" />여자
+          </td>
+        </tr>
+        <tr>
+          <td>체크박스</td>
+          <td>
+            <input type="checkbox" name="g" id="" value="1" />
+            <label for="">사과</label>
+            <input type="checkbox" name="g" id="" value="2" />
+            <label for="">포도</label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="제출" />
+            <input type="reset" value="reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
