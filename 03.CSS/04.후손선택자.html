@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>후손선택자</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+        format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      margin: 80px;
+      font-family: 'Pretendard-Regular';
+    }
+
+    ol li {
+      /*자손 + 후손*/
+      color: cornflowerblue;
+    }
+    ol > li {
+      /*자손*/
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <h3>후손선택자</h3>
+    <hr />
+
+    <ol>
+      <li>Css3 선택자</li>
+      <li>기본 선택자</li>
+      <ul>
+        <li>전체 선택자</li>
+        <li>태그 선택자</li>
+        <li>아이디 선택자와 클래스 선택자</li>
+      </ul>
+    </ol>
+    <h1>또 다른 li</h1>
+    <ul>
+      <li>다른 li1</li>
+      <li>다른 li2</li>
+    </ul>
+  </body>
+</html>
