@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹 패턴</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 960px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #menu {
+      width: 260px;
+      float: left;
+    }
+
+    #section {
+      width: 700px;
+      float: left;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      body {
+        width: auto;
+      }
+      #menu {
+        width: auto;
+        float: none;
+      }
+      #section {
+        width: auto;
+        float: none;
+      }
+    }
+  </style>
+  <body>
+    <div id="section">
+      <h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
+        deserunt.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+        doloribus fugiat earum, voluptatibus maiores dolores inventore enim odio
+        dolorum exercitationem eius velit nemo vel laboriosam veniam tenetur est
+        obcaecati autem officia temporibus molestiae amet accusamus iusto
+        debitis. Tempore nobis atque facilis quae impedit sequi iste, eaque
+        omnis? Officia distinctio maiores cupiditate sit consectetur explicabo
+        accusantium, molestias dignissimos adipisci suscipit fugiat corrupti ad,
+        libero iste provident velit molestiae esse vel veritatis fugit mollitia!
+        Eligendi in voluptas minima? Porro veritatis, possimus repudiandae,
+        aliquam aspernatur officia blanditiis distinctio quidem sint voluptatum
+        et dolores temporibus nostrum suscipit numquam cupiditate dicta quaerat
+        quo fugiat! Totam?
+      </p>
+    </div>
+    <div id="menu">
+      <ul>
+        <li>메뉴 A</li>
+        <li>메뉴 B</li>
+        <li>메뉴 C</li>
+      </ul>
+    </div>
+  </body>
+</html>
