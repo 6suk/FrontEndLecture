@@ -1,13 +1,22 @@
+/* 기본 */
 * {
-  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-    'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
-    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   color: #222222;
 }
 body {
   background-color: antiquewhite;
 }
+
+.contentBox {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 이미지 박스 */
 .box {
   position: relative;
   overflow: hidden;
@@ -42,6 +51,8 @@ body {
   width: 100%;
   transition: opacity 0.6s;
 }
+
+/* Post 이미지 hover 기능 */
 
 .descbox:hover > #descimg {
   opacity: 0.5;
@@ -79,14 +90,7 @@ body {
   --bs-btn-disabled-border-color: coral;
 }
 
-.mark {
-  padding: 3px 10px;
-  border-radius: 5%;
-  margin-right: 3px;
-  background-color: coral;
-  color: white;
-}
-
+/* border */
 .line {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -94,6 +98,8 @@ body {
 .introtxt > ul > li {
   margin-bottom: 0.5rem;
 }
+
+/* 타이틀 + nav */
 .title {
   align-items: flex-end;
   justify-content: space-between;
@@ -112,9 +118,23 @@ body {
   color: #22222280;
   font-weight: 600;
 }
-/* p {
-  margin-bottom: 0.5rem;
-} */
+
+/* 뱃지 */
+.bg-light {
+  color: #333;
+}
+.bg-info {
+  color: #fff;
+  background-color: coral !important;
+}
+
+/* Post */
+.desc {
+  text-align: center;
+}
+.desc h5 {
+  font-weight: 700;
+}
 
 @media screen and (max-width: 768px) {
   p {
