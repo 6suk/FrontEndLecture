@@ -56,6 +56,12 @@ body {
   color: #181818;
 }
 
+.master-description {
+  font-size: 15px;
+  font-weight: 500;
+  color: #383838;
+}
+
 /* 네비게이션 및 풀다운 메뉴 우성하기 */
 
 #main-navigation {
