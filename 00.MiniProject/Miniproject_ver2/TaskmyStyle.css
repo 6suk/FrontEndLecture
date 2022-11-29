@@ -260,4 +260,7 @@ body {
   .introtxt > ul {
     list-style: none;
   }
+  .title {
+    display: block !important;
+  }
 }
