@@ -1,0 +1,79 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  color: rgba(50, 47, 64, 1);
+}
+.fakeimg {
+  height: 300px;
+  /* background: #c7b9ff1e; */
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.fakeimg img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  height: 95%;
+}
+.navbar {
+  background-color: #e6e0ff;
+}
+
+.nav-link {
+  color: rgba(50, 47, 64, 0.5);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: rgba(50, 47, 64, 0.8);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  /* background-color: #b4a8e6; */
+  background-color: #e6e0ff;
+  color: rgba(50, 47, 64, 0.8);
+}
+
+.dropdown-item {
+  text-align: center;
+}
+
+.post {
+  color: #322f40;
+}
+p {
+  color: #645d80;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 0;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 1rem;
+  --bs-dropdown-font-size: 0.95rem;
+  --bs-dropdown-bg: #f5f2fff6;
+  --bs-dropdown-border-width: 0;
+  --bs-dropdown-link-color: rgba(50, 47, 64, 0.8);
+  --bs-dropdown-link-hover-color: rgba(50, 47, 64, 0.8);
+  --bs-dropdown-link-hover-bg: none;
+  --bs-dropdown-link-active-bg: ;
+
+  --bs-dropdown-link-active-bg: #413570;
+}
+
+.nav {
+  --bs-nav-link-color: rgba(50, 47, 64, 0.7);
+  --bs-nav-link-hover-color: rgba(50, 47, 64, 1);
+}
+.nav-link.disabled {
+  color: rgba(50, 47, 64, 0.3);
+}
+
+/* 아이콘 */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  vertical-align: middle;
+  color: #9f91db;
+}
