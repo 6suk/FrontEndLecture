@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성조작</title>
+    <script>
+      window.onload = function () {
+        const img = document.getElementById('img');
+
+        img.src = '../../00.MiniProject/img/IMG_4166.jpg';
+        // 웹 표준에서 지원하지 않는 속성을 지정할 때는 해당 메소드 사용
+        // img.setAttribute('width', 320);
+        img.width = 600;
+      };
+    </script>
+  </head>
+  <body>
+    <img id="img" />
+  </body>
+</html>
