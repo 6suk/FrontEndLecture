@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>CSS 선택자</title>
+
+    <script>
+      $(document).ready(function () {
+        /* 선택자 */
+
+        // $('#fruits').children('.national').css('backgroundColor', 'coral');
+        $('#fruits .national').css('backgroundColor', 'coral');
+        // $('#food').children('.foreign').css('color', 'coral');
+        $('#food .foreign').css('color', 'coral');
+        $('.foreign').css('backgroundColor', 'beige');
+
+        /* length(), get() */
+
+        const h1 = $('h1');
+        for (let i = 0; i < h1.length; i++) {
+          if (i % 2 == 1) {
+            const h1Ele = h1.get(i);
+            $(h1Ele).css('backgroundColor', 'yellow');
+          }
+        }
+
+        /* each() */
+
+        h1.each(function (index, element) {
+          if (index % 2 == 1) {
+            $(this).css('backgroundColor', 'yellow');
+          }
+        });
+
+        /* text(), html() */
+        $('.text-1').text('<h1>text()메소드<h2>');
+        $('.text-2').html('<h1>html()메소드<h2>');
+
+        /*appentTo()*/
+        $('<h3>prependTo<h3>').prependTo('.appendTest');
+        $('<h3>appendTo<h3>').appendTo('.appendTest');
+        $('<h3>insertBefore<h3>').insertBefore('.appendTest');
+        $('<h3>insertAfter<h3>').insertAfter('.appendTest');
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="appendTest">
+      <h3>appendTest</h3>
+    </div>
+
+    <ul id="fruits">
+      🍊과일🍒
+      <li class="national">사과</li>
+      <li class="foreign">바나나</li>
+      <li class="national">감</li>
+      <li class="foreign">파인애플</li>
+    </ul>
+
+    <ul id="food">
+      🥗음식🥩
+      <li class="national">김치찌개</li>
+      <li class="foreign">파스타</li>
+      <li class="national">갈비찜</li>
+      <li class="foreign">스테이크</li>
+    </ul>
+
+    <h1>Header 1</h1>
+    <h1>Header 2</h1>
+    <h1>Header 3</h1>
+    <h1>Header 4</h1>
+
+    <p class="text-1">TextA</p>
+    <p class="text-2">TextB</p>
+  </body>
+</html>

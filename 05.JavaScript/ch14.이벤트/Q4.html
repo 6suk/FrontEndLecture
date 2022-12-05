@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let car = [];
+
+    function answer4() {
+      const company = car.map((x) => x.split(' ')[0]);
+      const product = car.map((x) => x.split(' ').slice(1).join(' '));
+      document.getElementById('company').innerHTML = company;
+      document.getElementById('product').innerHTML = product;
+    }
+    function answer4_add() {
+      const carNode = document.getElementById('car');
+      car.push(carNode.value);
+    }
+  </script>
+  <body>
+    <input type="text" id="car" placeholder="자동자 제조사와 모델을 입력하세요." />
+    <button onclick="answer4_add()">추가</button>
+    <button onclick="answer4()">제출</button>
+    <p id="company"></p>
+    <p id="product"></p>
+  </body>
+</html>

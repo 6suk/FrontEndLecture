@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        /* 이벤트가 발생하면 새로운 객체 생성 */
+        let cnt = 1;
+        $('<h1></h1>').text('Header').appendTo('body');
+
+        $('h1').on('click', function () {
+          $('<h1></h1>').text(`Header plus ${cnt}`).appendTo('body');
+          cnt++;
+        });
+
+        /* 이벤트 추가 연결 */
+        $('<h3></h3>').text('이벤트 추가 연결').appendTo('body');
+
+        let cntTwo = 1;
+        const handler = function () {
+          $('<h3></h3>').text(`event plus ${cntTwo}`).css('color', 'coral').appendTo('body');
+          cntTwo++;
+        };
+
+        $('h3').on('click', handler);
+
+        let cntThree = 1;
+        /* 이벤트 간접 연결 */
+        $('<button></button>').text(`이벤트 간접 연결`).appendTo('body');
+
+        $('body').on('click', 'button', function () {
+          $('<p></p>').text(`버튼클릭 ${cntThree}`).appendTo('body');
+          cntThree++;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

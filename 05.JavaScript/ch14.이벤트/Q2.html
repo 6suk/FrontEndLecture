@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+
+      function answer(){
+        const text2 = document.querySelector('#text').value;
+        const reTxt = text2.replace(/[.,'']/g,'').replace(/[\n]/g,'')
+        const reTxtBox = reTxt.split(' ')
+
+        document.getElementById('test').innerHTML = reTxt;
+
+        let cnt = 0;
+        
+        for(let a of reTxtBox){
+          if(a == 'the') cnt ++
+        }
+
+        document.querySelector('#result').innerHTML = cnt;
+    }
+
+
+      
+
+    </script>
+  </head>
+  <div style="display: flex;">
+  <textarea rows="10" cols="100" id="text">
+    the grown-ups' response, this time, was to advise me to lay aside my drawings of boa constrictors, whether from
+      the inside or the outside, and devote myself instead to geography, history, arithmetic, and grammar. That is why,
+      at the, age of six, I gave up what might have been a magnificent career as a painter. I had been disheartened by
+      the failure of my Drawing Number One and my Drawing Number Two. Grown-ups never understand anything by themselves,
+      and it is tiresome for children to be always and forever explaining things to the.
+  </textarea>
+  <button onclick="answer()">제출</button><br />
+</div>
+<p id="test"></p>
+<h3 id="result"></h3>
+
+
+  </body>
+</html>

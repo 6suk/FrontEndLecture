@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="js"></p>
+    <p id="jq"></p>
+    <p id="jq2"></p>
+
+    <script>
+      const pjs = document.getElementById('js');
+      pjs.innerHTML = '자바스크립트 동적 생성';
+      pjs.style.backgroundColor = 'coral';
+      pjs.style.fontSize = '30px';
+      pjs.style.color = 'white';
+
+      jQuery('#jq').text('jQuery 동적 생성');
+      jQuery('#jq').css('backgroundColor', 'beige');
+      jQuery('#jq').css('fontSize', '30px');
+      jQuery('#jq').css('color', '#333');
+
+      $('#jq2').text('jQuery 동적 생성').css('backgroundColor', 'beige').css('fontSize', '30px').css('color', '#333');
+    </script>
+  </body>
+</html>

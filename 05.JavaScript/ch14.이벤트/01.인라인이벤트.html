@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인라인 이벤트 모델</title>
+    <script>
+      function buttonClick() {
+        alert('Click');
+      }
+
+      window.onload = function () {
+        const btn4 = document.getElementById('btn4');
+        btn4.addEventListener('click', () => alert('버튼4가 클릭되었음'));
+        btn4.addEventListener('mouseover', () => {
+          const h3 = document.createElement('h3');
+          const textNode = document.createTextNode('마우스오버');
+          h3.appendChild(textNode);
+          document.body.appendChild(h3);
+        });
+        btn4.addEventListener('mouseout', () => {
+          const h3 = document.querySelector('h3');
+          document.body.removeChild(h3);
+        });
+
+        const img = document.createElement('img');
+        btn5.addEventListener('mouseover', () => {
+          img.src = `https://github.com/6suk/TIL/blob/master/HTML+CSS/img/1124_html_01.png?raw=true`;
+          document.body.appendChild(img);
+        });
+        btn5.addEventListener('mouseout', () => {
+          document.body.removeChild(img);
+        });
+
+        const btn6 = document.getElementById('btn6');
+        btn6.addEventListener('click', () => {
+          alert('a 태그의 기본 이벤트 처리를 삭제합니다.');
+          const a = document.querySelector('a');
+          a.onclick = () => {
+            return false;
+          };
+        });
+      };
+    </script>
+  </head>
+  <body style="margin: 40px">
+    <button onclick="buttonClick()" style="margin: 1rem">버튼</button><br />
+    <button onclick="buttonClick()" style="margin: 1rem">버튼2</button><br />
+    <button onclick="buttonClick()" style="margin: 1rem">버튼3</button><br />
+    <button id="btn4" style="margin: 1rem">버튼4</button><br />
+    <button id="btn5" style="margin: 1rem">버튼5</button><br />
+    <button id="btn6" style="margin: 1rem">버튼6</button>
+    <a href="http://www.naver.com">네이버</a><br />
+  </body>
+</html>
