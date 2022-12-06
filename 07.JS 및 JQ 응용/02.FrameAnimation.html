@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frame Animation</title>
+    <script>
+      window.onload = function () {
+        let count = 0;
+        let image = document.getElementById('image');
+        let frames = [
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/0.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/1.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/2.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/3.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/4.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/5.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/6.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/7.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/8.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/9.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/10.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/11.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/12.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/13.png?raw=true',
+          'https://github.com/ckiekim/Front-end-lecture-2022.11/blob/main/img/human/14.png?raw=true',
+        ];
+
+        setInterval(() => {
+          image.src = frames[count++ % frames.length];
+        }, 1000 / 30); // 30 frame/sec
+      };
+    </script>
+  </head>
+  <body style="margin: 40px">
+    <img id="image" />
+  </body>
+</html>
